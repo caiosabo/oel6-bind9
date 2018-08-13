@@ -21,3 +21,4 @@ ADD --chown=named:named var/named/oracle.in.revzone /var/named/oracle.in.revzone
 # EXPOSE 192.168.145.1:53/tcp 192.168.145.1:53/udp
 # VOLUME ["/var/bind"]
 HEALTHCHECK CMD ["rndc", "status"]
+CMD ["service", "named", "start"]
