@@ -1,0 +1,24 @@
+$TTL 86400
+@	IN SOA	dns.oracle.in root.oracle.in (
+                                        201808122155      ; Serial (d. adams)
+                                        1H                ; Refresh
+                                        15M               ; Retry
+                                        1W                ; Expire
+                                        1D )              ; Minimum
+
+                           A            192.168.145.1
+                           NS           dns01.oracle.in.  ; Internal DNS
+                           NS           dns02.oracle.in.  ; External DNS
+
+dns01                   IN A            192.168.145.1     ; Name Server definition
+dns02                   IN A            192.168.145.2     ; Name Server definition
+www                     IN A            192.168.145.10    ; Web Server definition
+ubuntu                  IN A            192.168.145.1 
+vm1                     IN A            192.168.145.10
+vm2                     IN A            192.168.145.11
+vm3                     IN A            192.168.145.12
+vm4                     IN A            192.168.145.13
+clarovm1                IN A            192.168.145.14
+home                    IN CNAME        www
+ftp                     IN CNAME        www
+db                      IN CNAME        vm1
