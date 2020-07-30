@@ -11,7 +11,7 @@ MY_DOCKER0_IP=$(ip -4 addr show docker0 | egrep -o "inet ([0-9]+)(\.[0-9]+){3}" 
 
 # --security-opt apparmor:unconfined
 
-HOST_BASEDIR="/home/casabo/Documents/docker-containers/oel6-bind9";
+HOST_BASEDIR="/home/casabo/git-projects/caiosabo/oel6-bind9";
 
 DOCKER_PORTS="-p ${MY_DOCKER0_IP}:53:53 -p ${MY_DOCKER0_IP}:53:53/udp";
 #DOCKER_PORTS="-p 192.168.145.1:53:53 -p 192.168.145.1:53:53/udp -p 172.17.0.1:53:53 -p 172.17.0.1:53:53/udp";
@@ -26,7 +26,7 @@ DOCKER_ENV="-e TZ=America/Sao_Paulo";
 DOCKER_SPECIAL_ARGS="--cap-add=SYS_ADMIN --security-opt apparmor:unconfined";
 DOCKER_NAME="--name ${CONTNAME} --hostname ${CONTNAME}";
 #DOCKER_IMAGE="local-oel6-bind9:2.8";
-DOCKER_IMAGE="caiosabo/oel6-bind9:master";
+DOCKER_IMAGE="caiosabo/oel6-bind9-auto:master";
 DOCKER_COMMAND="/bin/bash";
 
 # Create a new container with volume

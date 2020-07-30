@@ -26,3 +26,4 @@ ol7u8-elasticsearch     IN A            192.168.60.210
 kibana                  IN CNAME        ol7u8-elasticsearch
 elasticsearch           IN CNAME        ol7u8-elasticsearch
 grafana                 IN CNAME        ol7u8-elasticsearch
+metadb                  IN A            192.168.60.1
