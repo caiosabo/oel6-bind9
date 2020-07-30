@@ -4,7 +4,7 @@
 
 FROM oraclelinux:6.10
 MAINTAINER Caio Sabo <caiosabo@gmail.com>
-#TAG local-oel6-bind9:2.4
+TAG local-oel6-bind9:1.0
 
 RUN yum install bind-chroot bind-utils wget -y && \
     yum clean all && \
